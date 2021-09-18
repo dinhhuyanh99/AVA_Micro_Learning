@@ -1,0 +1,170 @@
+* {
+    -webkit-transition: background-color .2s, color .2s;
+    transition: background-color .2s, color .2s;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto;
+    background-color: white;
+    color: black;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(92, 138, 153);
+}
+
+nav {
+    background-color: white;
+}
+
+footer {
+    background-color: rgb(176, 214, 226);
+    color: black;
+}
+
+.black-text, .black-text * {
+    color: black !important;
+}
+
+.sidenav .material-icons, nav a:not([class*="btn"]) {
+    color: black !important;
+}
+
+.ava-blue-btn {
+    background-color: rgb(176, 214, 226)!important;
+    color: black;
+}
+.ava-blue-btn:hover, .ava-blue-btn:focus {
+    background-color: rgb(136, 165, 175)!important;
+}
+
+.brand-logo, .brand-logo img {
+    height: 64px;
+}
+
+.sidenav .user-view .circle {
+    height: 128px;
+    width: 128px;
+}
+
+.search-nav-wrapper {
+    min-width: 256px;
+}
+
+.search-results {
+    background-color: white;
+    -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    border-radius: 0 0 2px 2px;
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: block!important;
+  }
+}
+
+span.badge.new {
+    background-color: rgb(176, 214, 226);
+    color: black;
+}
+
+span.badge.new:after {
+    content: "";
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid rgb(176, 214, 226);
+  -webkit-box-shadow: 0 1px 0 0 rgb(176, 214, 226);
+          box-shadow: 0 1px 0 0 rgb(176, 214, 226);
+}
+
+.card, .card-panel {
+    background-color: rgb(176, 214, 226);
+    color: black;
+}
+
+.card .card-title {
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 100%;
+}
+
+.card .card-action a {
+    color:  black!important;
+}
+
+.card .card-action a:hover, .card .card-action a:focus {
+    color:  white!important;
+}
+
+.progress {
+    background-color: rgb(198, 233, 255);
+}
+
+.progress.study-progress {
+    height: 24px;
+}
+
+.progress .determinate, .progress .indeterminate {
+    background-color: rgb(138, 163, 178);
+}
+
+.progress .determinate {
+    width: 100%;
+    padding: 0 5px 0 5px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* DARK MODE CSS SECTION */
+.dark-mode, .dark-mode nav, .dark-mode .sidenav,
+.dark-mode .dropdown-content {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode nav, .dark-mode .search-results,
+.dark-mode .card-panel, .dark-mode .card, .dark-mode .toast, .dark-mode .btn, .dark-mode .btn-large, .dark-mode .btn-small, .dark-mode .btn-floating {
+    -webkit-box-shadow: 0 2px 2px 0 rgb(176 214 226 / 14%), 0 3px 1px -2px rgb(176 214 226 / 12%), 0 1px 5px 0 rgb(176 214 226 / 20%);
+    box-shadow: 0 2px 2px 0 rgb(176 214 226 / 14%), 0 3px 1px -2px rgb(176 214 226 / 12%), 0 1px 5px 0 rgb(176 214 226 / 20%);
+}
+
+.dark-mode .search-results {
+    background-color: black;
+}
+
+.dark-mode .waves-effect .waves-ripple, .dark-mode .sidenav-overlay,
+.dark-mode .search-results a:hover, .dark-mode .search-results a:focus,
+.dark-mode .dropdown-content *:hover, .dark-mode .dropdown-content *:focus,
+.dark-mode header ul li a:hover, .dark-mode header ul li a:focus,
+.dark-mode main ul li a:hover, .dark-mode main ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.dark-mode .sidenav .material-icons, .dark-mode nav a:not([class*="btn"]) {
+    color: white !important;
+}

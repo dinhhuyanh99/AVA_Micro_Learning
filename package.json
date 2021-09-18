@@ -1,0 +1,24 @@
+{
+  "name": "ava_micro_learning",
+  "version": "1.0.0",
+  "description": "A new micro-learning service for the Vietnamese",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server --cors -o /index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinhhuyanh99/AVA_Micro_Learning.git"
+  },
+  "author": "AVA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinhhuyanh99/AVA_Micro_Learning/issues"
+  },
+  "homepage": "https://github.com/dinhhuyanh99/AVA_Micro_Learning#readme",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "http-server": "^13.0.2",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}
