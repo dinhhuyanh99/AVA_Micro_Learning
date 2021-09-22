@@ -1,170 +1,1350 @@
 * {
-    -webkit-transition: background-color .2s, color .2s;
-    transition: background-color .2s, color .2s;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Roboto;
-    background-color: white;
-    color: black;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  font-family: Roboto;
+  background-color: white;
+  color: black;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: rgb(92, 138, 153);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(92, 138, 153);
 }
 
 nav {
-    background-color: white;
+  background-color: white;
 }
 
 footer {
-    background-color: rgb(176, 214, 226);
-    color: black;
+  background-color: rgb(176, 214, 226);
+  color: black;
 }
 
-.black-text, .black-text * {
-    color: black !important;
+.black-text,
+.black-text * {
+  color: black !important;
 }
 
-.sidenav .material-icons, nav a:not([class*="btn"]) {
-    color: black !important;
+.sidenav .material-icons,
+nav a:not([class*="btn"]) {
+  color: black !important;
+}
+
+.collection {
+  background-color: rgb(136, 165, 175);
+  padding-bottom: 20px;
+}
+
+.collection.collection-limit {
+  max-height: 500px!important;
+  padding: 0px;
+  overflow: scroll;
+}
+
+.collection.with-header .collection-header {
+  position: sticky; top: 0;
+  background-color: rgb(136, 165, 175);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 30px;
+}
+
+.collection .collection-item {
+  color: black!important;
+}
+
+.collection .collection-item.active,
+.collection .collection-item:hover {
+  background-color: rgb(176, 214, 226) !important;
 }
 
 .ava-blue-btn {
-    background-color: rgb(176, 214, 226)!important;
-    color: black;
+  background-color: rgb(176, 214, 226) !important;
+  color: black;
 }
-.ava-blue-btn:hover, .ava-blue-btn:focus {
-    background-color: rgb(136, 165, 175)!important;
-}
-
-.brand-logo, .brand-logo img {
-    height: 64px;
+.ava-blue-btn:hover,
+.ava-blue-btn:focus {
+  background-color: rgb(136, 165, 175) !important;
 }
 
-.sidenav .user-view .circle {
-    height: 128px;
-    width: 128px;
+.brand-logo,
+.brand-logo img {
+  height: 64px;
+}
+
+.sidenav .user-view .circleProgressSegment {
+  height: 128px;
+  width: 128px;
 }
 
 .search-nav-wrapper {
-    min-width: 256px;
+  min-width: 256px;
 }
 
 .search-results {
-    background-color: white;
-    -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
-    border-radius: 0 0 2px 2px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  border-radius: 0 0 2px 2px;
 }
 
 @media only screen and (min-width: 993px) {
   nav a.sidenav-trigger {
-    display: block!important;
+    display: block !important;
   }
 }
 
 span.badge.new {
-    background-color: rgb(176, 214, 226);
-    color: black;
+  background-color: rgb(176, 214, 226);
+  color: black;
 }
 
 span.badge.new:after {
-    content: "";
+  content: "";
 }
 
 input:not([type]):focus:not([readonly]),
-input[type=text]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=url]:not(.browser-default):focus:not([readonly]),
-input[type=time]:not(.browser-default):focus:not([readonly]),
-input[type=date]:not(.browser-default):focus:not([readonly]),
-input[type=datetime]:not(.browser-default):focus:not([readonly]),
-input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
-input[type=tel]:not(.browser-default):focus:not([readonly]),
-input[type=number]:not(.browser-default):focus:not([readonly]),
-input[type=search]:not(.browser-default):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="url"]:not(.browser-default):focus:not([readonly]),
+input[type="time"]:not(.browser-default):focus:not([readonly]),
+input[type="date"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+input[type="tel"]:not(.browser-default):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="search"]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid rgb(176, 214, 226);
   -webkit-box-shadow: 0 1px 0 0 rgb(176, 214, 226);
-          box-shadow: 0 1px 0 0 rgb(176, 214, 226);
+  box-shadow: 0 1px 0 0 rgb(176, 214, 226);
 }
 
-.card, .card-panel {
-    background-color: rgb(176, 214, 226);
-    color: black;
+.card,
+.card-panel {
+  background-color: rgb(176, 214, 226);
+  color: black;
 }
 
 .card .card-title {
-    background-color: rgba(0, 0, 0, 0.35);
-    width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
 }
 
 .card .card-action a {
-    color:  black!important;
+  color: black !important;
 }
 
-.card .card-action a:hover, .card .card-action a:focus {
-    color:  white!important;
+.card .card-action a:hover,
+.card .card-action a:focus {
+  color: white !important;
 }
 
 .progress {
-    background-color: rgb(198, 233, 255);
+  background-color: rgb(198, 233, 255);
 }
 
 .progress.study-progress {
-    height: 24px;
+  height: 24px;
 }
 
-.progress .determinate, .progress .indeterminate {
-    background-color: rgb(138, 163, 178);
+.progress .determinate,
+.progress .indeterminate {
+  background-color: rgb(138, 163, 178);
 }
 
 .progress .determinate {
-    width: 100%;
-    padding: 0 5px 0 5px;
-    text-align: right;
-    font-weight: bold;
+  width: 100%;
+  padding: 0 5px 0 5px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.breadcrumb-container {
+  padding: 12px 0 12px 0 !important;
+}
+
+.breadcrumb-container a {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: grey;
+  padding: 4px;
+}
+
+.breadcrumb-container a:last-child {
+  font-weight: 900;
+  color: black;
+}
+
+.breadcrumb-container :not(a:first-child)::before {
+  content: "\E5CC";
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Material Icons";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.74rem;
+  margin: 0 6px 0 2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.rect-auto,
+.circularProgress.percent51 .slice,
+.circularProgress.percent52 .slice,
+.circularProgress.percent53 .slice,
+.circularProgress.percent54 .slice,
+.circularProgress.percent55 .slice,
+.circularProgress.percent56 .slice,
+.circularProgress.percent57 .slice,
+.circularProgress.percent58 .slice,
+.circularProgress.percent59 .slice,
+.circularProgress.percent60 .slice,
+.circularProgress.percent61 .slice,
+.circularProgress.percent62 .slice,
+.circularProgress.percent63 .slice,
+.circularProgress.percent64 .slice,
+.circularProgress.percent65 .slice,
+.circularProgress.percent66 .slice,
+.circularProgress.percent67 .slice,
+.circularProgress.percent68 .slice,
+.circularProgress.percent69 .slice,
+.circularProgress.percent70 .slice,
+.circularProgress.percent71 .slice,
+.circularProgress.percent72 .slice,
+.circularProgress.percent73 .slice,
+.circularProgress.percent74 .slice,
+.circularProgress.percent75 .slice,
+.circularProgress.percent76 .slice,
+.circularProgress.percent77 .slice,
+.circularProgress.percent78 .slice,
+.circularProgress.percent79 .slice,
+.circularProgress.percent80 .slice,
+.circularProgress.percent81 .slice,
+.circularProgress.percent82 .slice,
+.circularProgress.percent83 .slice,
+.circularProgress.percent84 .slice,
+.circularProgress.percent85 .slice,
+.circularProgress.percent86 .slice,
+.circularProgress.percent87 .slice,
+.circularProgress.percent88 .slice,
+.circularProgress.percent89 .slice,
+.circularProgress.percent90 .slice,
+.circularProgress.percent91 .slice,
+.circularProgress.percent92 .slice,
+.circularProgress.percent93 .slice,
+.circularProgress.percent94 .slice,
+.circularProgress.percent95 .slice,
+.circularProgress.percent96 .slice,
+.circularProgress.percent97 .slice,
+.circularProgress.percent98 .slice,
+.circularProgress.percent99 .slice,
+.circularProgress.percent100 .slice {
+  clip: rect(auto, auto, auto, auto);
+}
+.pie,
+.circularProgress .bar,
+.circularProgress.percent51 .fill,
+.circularProgress.percent52 .fill,
+.circularProgress.percent53 .fill,
+.circularProgress.percent54 .fill,
+.circularProgress.percent55 .fill,
+.circularProgress.percent56 .fill,
+.circularProgress.percent57 .fill,
+.circularProgress.percent58 .fill,
+.circularProgress.percent59 .fill,
+.circularProgress.percent60 .fill,
+.circularProgress.percent61 .fill,
+.circularProgress.percent62 .fill,
+.circularProgress.percent63 .fill,
+.circularProgress.percent64 .fill,
+.circularProgress.percent65 .fill,
+.circularProgress.percent66 .fill,
+.circularProgress.percent67 .fill,
+.circularProgress.percent68 .fill,
+.circularProgress.percent69 .fill,
+.circularProgress.percent70 .fill,
+.circularProgress.percent71 .fill,
+.circularProgress.percent72 .fill,
+.circularProgress.percent73 .fill,
+.circularProgress.percent74 .fill,
+.circularProgress.percent75 .fill,
+.circularProgress.percent76 .fill,
+.circularProgress.percent77 .fill,
+.circularProgress.percent78 .fill,
+.circularProgress.percent79 .fill,
+.circularProgress.percent80 .fill,
+.circularProgress.percent81 .fill,
+.circularProgress.percent82 .fill,
+.circularProgress.percent83 .fill,
+.circularProgress.percent84 .fill,
+.circularProgress.percent85 .fill,
+.circularProgress.percent86 .fill,
+.circularProgress.percent87 .fill,
+.circularProgress.percent88 .fill,
+.circularProgress.percent89 .fill,
+.circularProgress.percent90 .fill,
+.circularProgress.percent91 .fill,
+.circularProgress.percent92 .fill,
+.circularProgress.percent93 .fill,
+.circularProgress.percent94 .fill,
+.circularProgress.percent95 .fill,
+.circularProgress.percent96 .fill,
+.circularProgress.percent97 .fill,
+.circularProgress.percent98 .fill,
+.circularProgress.percent99 .fill,
+.circularProgress.percent100 .fill {
+  position: absolute;
+  border: 0.08em solid rgb(136, 165, 175);
+  width: 0.84em;
+  height: 0.84em;
+  clip: rect(0em, 0.5em, 1em, 0em);
+  border-radius: 50%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.pie-fill,
+.circularProgress.percent51 .bar:after,
+.circularProgress.percent51 .fill,
+.circularProgress.percent52 .bar:after,
+.circularProgress.percent52 .fill,
+.circularProgress.percent53 .bar:after,
+.circularProgress.percent53 .fill,
+.circularProgress.percent54 .bar:after,
+.circularProgress.percent54 .fill,
+.circularProgress.percent55 .bar:after,
+.circularProgress.percent55 .fill,
+.circularProgress.percent56 .bar:after,
+.circularProgress.percent56 .fill,
+.circularProgress.percent57 .bar:after,
+.circularProgress.percent57 .fill,
+.circularProgress.percent58 .bar:after,
+.circularProgress.percent58 .fill,
+.circularProgress.percent59 .bar:after,
+.circularProgress.percent59 .fill,
+.circularProgress.percent60 .bar:after,
+.circularProgress.percent60 .fill,
+.circularProgress.percent61 .bar:after,
+.circularProgress.percent61 .fill,
+.circularProgress.percent62 .bar:after,
+.circularProgress.percent62 .fill,
+.circularProgress.percent63 .bar:after,
+.circularProgress.percent63 .fill,
+.circularProgress.percent64 .bar:after,
+.circularProgress.percent64 .fill,
+.circularProgress.percent65 .bar:after,
+.circularProgress.percent65 .fill,
+.circularProgress.percent66 .bar:after,
+.circularProgress.percent66 .fill,
+.circularProgress.percent67 .bar:after,
+.circularProgress.percent67 .fill,
+.circularProgress.percent68 .bar:after,
+.circularProgress.percent68 .fill,
+.circularProgress.percent69 .bar:after,
+.circularProgress.percent69 .fill,
+.circularProgress.percent70 .bar:after,
+.circularProgress.percent70 .fill,
+.circularProgress.percent71 .bar:after,
+.circularProgress.percent71 .fill,
+.circularProgress.percent72 .bar:after,
+.circularProgress.percent72 .fill,
+.circularProgress.percent73 .bar:after,
+.circularProgress.percent73 .fill,
+.circularProgress.percent74 .bar:after,
+.circularProgress.percent74 .fill,
+.circularProgress.percent75 .bar:after,
+.circularProgress.percent75 .fill,
+.circularProgress.percent76 .bar:after,
+.circularProgress.percent76 .fill,
+.circularProgress.percent77 .bar:after,
+.circularProgress.percent77 .fill,
+.circularProgress.percent78 .bar:after,
+.circularProgress.percent78 .fill,
+.circularProgress.percent79 .bar:after,
+.circularProgress.percent79 .fill,
+.circularProgress.percent80 .bar:after,
+.circularProgress.percent80 .fill,
+.circularProgress.percent81 .bar:after,
+.circularProgress.percent81 .fill,
+.circularProgress.percent82 .bar:after,
+.circularProgress.percent82 .fill,
+.circularProgress.percent83 .bar:after,
+.circularProgress.percent83 .fill,
+.circularProgress.percent84 .bar:after,
+.circularProgress.percent84 .fill,
+.circularProgress.percent85 .bar:after,
+.circularProgress.percent85 .fill,
+.circularProgress.percent86 .bar:after,
+.circularProgress.percent86 .fill,
+.circularProgress.percent87 .bar:after,
+.circularProgress.percent87 .fill,
+.circularProgress.percent88 .bar:after,
+.circularProgress.percent88 .fill,
+.circularProgress.percent89 .bar:after,
+.circularProgress.percent89 .fill,
+.circularProgress.percent90 .bar:after,
+.circularProgress.percent90 .fill,
+.circularProgress.percent91 .bar:after,
+.circularProgress.percent91 .fill,
+.circularProgress.percent92 .bar:after,
+.circularProgress.percent92 .fill,
+.circularProgress.percent93 .bar:after,
+.circularProgress.percent93 .fill,
+.circularProgress.percent94 .bar:after,
+.circularProgress.percent94 .fill,
+.circularProgress.percent95 .bar:after,
+.circularProgress.percent95 .fill,
+.circularProgress.percent96 .bar:after,
+.circularProgress.percent96 .fill,
+.circularProgress.percent97 .bar:after,
+.circularProgress.percent97 .fill,
+.circularProgress.percent98 .bar:after,
+.circularProgress.percent98 .fill,
+.circularProgress.percent99 .bar:after,
+.circularProgress.percent99 .fill,
+.circularProgress.percent100 .bar:after,
+.circularProgress.percent100 .fill {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.circularProgress {
+  position: relative;
+  font-size: 120px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  float: left;
+  margin: 0 0.1em 0.1em 0;
+  background-color: #cccccc;
+}
+.circularProgress *,
+.circularProgress *:before,
+.circularProgress *:after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.circularProgress.center {
+  float: none;
+  margin: 0 auto;
+}
+.circularProgress.big {
+  font-size: 240px;
+}
+.circularProgress.small {
+  font-size: 80px;
+}
+.circularProgress > span {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 5em;
+  line-height: 5em;
+  font-size: 0.2em;
+  color: #b9b9b9;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.circularProgress:after {
+  position: absolute;
+  top: 0.08em;
+  left: 0.08em;
+  display: block;
+  content: " ";
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  width: 0.84em;
+  height: 0.84em;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.circularProgress .slice {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  clip: rect(0em, 1em, 1em, 0.5em);
+}
+.circularProgress.percent1 .bar {
+  -webkit-transform: rotate(3.6deg);
+  -moz-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  -o-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.circularProgress.percent2 .bar {
+  -webkit-transform: rotate(7.2deg);
+  -moz-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  -o-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.circularProgress.percent3 .bar {
+  -webkit-transform: rotate(10.8deg);
+  -moz-transform: rotate(10.8deg);
+  -ms-transform: rotate(10.8deg);
+  -o-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.circularProgress.percent4 .bar {
+  -webkit-transform: rotate(14.4deg);
+  -moz-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  -o-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.circularProgress.percent5 .bar {
+  -webkit-transform: rotate(18deg);
+  -moz-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  -o-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.circularProgress.percent6 .bar {
+  -webkit-transform: rotate(21.6deg);
+  -moz-transform: rotate(21.6deg);
+  -ms-transform: rotate(21.6deg);
+  -o-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.circularProgress.percent7 .bar {
+  -webkit-transform: rotate(25.2deg);
+  -moz-transform: rotate(25.2deg);
+  -ms-transform: rotate(25.2deg);
+  -o-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.circularProgress.percent8 .bar {
+  -webkit-transform: rotate(28.8deg);
+  -moz-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  -o-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.circularProgress.percent9 .bar {
+  -webkit-transform: rotate(32.4deg);
+  -moz-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  -o-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.circularProgress.percent10 .bar {
+  -webkit-transform: rotate(36deg);
+  -moz-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  -o-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.circularProgress.percent11 .bar {
+  -webkit-transform: rotate(39.6deg);
+  -moz-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  -o-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.circularProgress.percent12 .bar {
+  -webkit-transform: rotate(43.2deg);
+  -moz-transform: rotate(43.2deg);
+  -ms-transform: rotate(43.2deg);
+  -o-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.circularProgress.percent13 .bar {
+  -webkit-transform: rotate(46.800000000000004deg);
+  -moz-transform: rotate(46.800000000000004deg);
+  -ms-transform: rotate(46.800000000000004deg);
+  -o-transform: rotate(46.800000000000004deg);
+  transform: rotate(46.800000000000004deg);
+}
+.circularProgress.percent14 .bar {
+  -webkit-transform: rotate(50.4deg);
+  -moz-transform: rotate(50.4deg);
+  -ms-transform: rotate(50.4deg);
+  -o-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.circularProgress.percent15 .bar {
+  -webkit-transform: rotate(54deg);
+  -moz-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  -o-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.circularProgress.percent16 .bar {
+  -webkit-transform: rotate(57.6deg);
+  -moz-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  -o-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.circularProgress.percent17 .bar {
+  -webkit-transform: rotate(61.2deg);
+  -moz-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  -o-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.circularProgress.percent18 .bar {
+  -webkit-transform: rotate(64.8deg);
+  -moz-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  -o-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.circularProgress.percent19 .bar {
+  -webkit-transform: rotate(68.4deg);
+  -moz-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  -o-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.circularProgress.percent20 .bar {
+  -webkit-transform: rotate(72deg);
+  -moz-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  -o-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.circularProgress.percent21 .bar {
+  -webkit-transform: rotate(75.60000000000001deg);
+  -moz-transform: rotate(75.60000000000001deg);
+  -ms-transform: rotate(75.60000000000001deg);
+  -o-transform: rotate(75.60000000000001deg);
+  transform: rotate(75.60000000000001deg);
+}
+.circularProgress.percent22 .bar {
+  -webkit-transform: rotate(79.2deg);
+  -moz-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  -o-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.circularProgress.percent23 .bar {
+  -webkit-transform: rotate(82.8deg);
+  -moz-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  -o-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.circularProgress.percent24 .bar {
+  -webkit-transform: rotate(86.4deg);
+  -moz-transform: rotate(86.4deg);
+  -ms-transform: rotate(86.4deg);
+  -o-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.circularProgress.percent25 .bar {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.circularProgress.percent26 .bar {
+  -webkit-transform: rotate(93.60000000000001deg);
+  -moz-transform: rotate(93.60000000000001deg);
+  -ms-transform: rotate(93.60000000000001deg);
+  -o-transform: rotate(93.60000000000001deg);
+  transform: rotate(93.60000000000001deg);
+}
+.circularProgress.percent27 .bar {
+  -webkit-transform: rotate(97.2deg);
+  -moz-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  -o-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.circularProgress.percent28 .bar {
+  -webkit-transform: rotate(100.8deg);
+  -moz-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  -o-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.circularProgress.percent29 .bar {
+  -webkit-transform: rotate(104.4deg);
+  -moz-transform: rotate(104.4deg);
+  -ms-transform: rotate(104.4deg);
+  -o-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.circularProgress.percent30 .bar {
+  -webkit-transform: rotate(108deg);
+  -moz-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  -o-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.circularProgress.percent31 .bar {
+  -webkit-transform: rotate(111.60000000000001deg);
+  -moz-transform: rotate(111.60000000000001deg);
+  -ms-transform: rotate(111.60000000000001deg);
+  -o-transform: rotate(111.60000000000001deg);
+  transform: rotate(111.60000000000001deg);
+}
+.circularProgress.percent32 .bar {
+  -webkit-transform: rotate(115.2deg);
+  -moz-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  -o-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.circularProgress.percent33 .bar {
+  -webkit-transform: rotate(118.8deg);
+  -moz-transform: rotate(118.8deg);
+  -ms-transform: rotate(118.8deg);
+  -o-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.circularProgress.percent34 .bar {
+  -webkit-transform: rotate(122.4deg);
+  -moz-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  -o-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.circularProgress.percent35 .bar {
+  -webkit-transform: rotate(126deg);
+  -moz-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  -o-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.circularProgress.percent36 .bar {
+  -webkit-transform: rotate(129.6deg);
+  -moz-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  -o-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.circularProgress.percent37 .bar {
+  -webkit-transform: rotate(133.20000000000002deg);
+  -moz-transform: rotate(133.20000000000002deg);
+  -ms-transform: rotate(133.20000000000002deg);
+  -o-transform: rotate(133.20000000000002deg);
+  transform: rotate(133.20000000000002deg);
+}
+.circularProgress.percent38 .bar {
+  -webkit-transform: rotate(136.8deg);
+  -moz-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  -o-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.circularProgress.percent39 .bar {
+  -webkit-transform: rotate(140.4deg);
+  -moz-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  -o-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.circularProgress.percent40 .bar {
+  -webkit-transform: rotate(144deg);
+  -moz-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  -o-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.circularProgress.percent41 .bar {
+  -webkit-transform: rotate(147.6deg);
+  -moz-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  -o-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.circularProgress.percent42 .bar {
+  -webkit-transform: rotate(151.20000000000002deg);
+  -moz-transform: rotate(151.20000000000002deg);
+  -ms-transform: rotate(151.20000000000002deg);
+  -o-transform: rotate(151.20000000000002deg);
+  transform: rotate(151.20000000000002deg);
+}
+.circularProgress.percent43 .bar {
+  -webkit-transform: rotate(154.8deg);
+  -moz-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  -o-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.circularProgress.percent44 .bar {
+  -webkit-transform: rotate(158.4deg);
+  -moz-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  -o-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.circularProgress.percent45 .bar {
+  -webkit-transform: rotate(162deg);
+  -moz-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  -o-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.circularProgress.percent46 .bar {
+  -webkit-transform: rotate(165.6deg);
+  -moz-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  -o-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.circularProgress.percent47 .bar {
+  -webkit-transform: rotate(169.20000000000002deg);
+  -moz-transform: rotate(169.20000000000002deg);
+  -ms-transform: rotate(169.20000000000002deg);
+  -o-transform: rotate(169.20000000000002deg);
+  transform: rotate(169.20000000000002deg);
+}
+.circularProgress.percent48 .bar {
+  -webkit-transform: rotate(172.8deg);
+  -moz-transform: rotate(172.8deg);
+  -ms-transform: rotate(172.8deg);
+  -o-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.circularProgress.percent49 .bar {
+  -webkit-transform: rotate(176.4deg);
+  -moz-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  -o-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.circularProgress.percent50 .bar {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.circularProgress.percent51 .bar {
+  -webkit-transform: rotate(183.6deg);
+  -moz-transform: rotate(183.6deg);
+  -ms-transform: rotate(183.6deg);
+  -o-transform: rotate(183.6deg);
+  transform: rotate(183.6deg);
+}
+.circularProgress.percent52 .bar {
+  -webkit-transform: rotate(187.20000000000002deg);
+  -moz-transform: rotate(187.20000000000002deg);
+  -ms-transform: rotate(187.20000000000002deg);
+  -o-transform: rotate(187.20000000000002deg);
+  transform: rotate(187.20000000000002deg);
+}
+.circularProgress.percent53 .bar {
+  -webkit-transform: rotate(190.8deg);
+  -moz-transform: rotate(190.8deg);
+  -ms-transform: rotate(190.8deg);
+  -o-transform: rotate(190.8deg);
+  transform: rotate(190.8deg);
+}
+.circularProgress.percent54 .bar {
+  -webkit-transform: rotate(194.4deg);
+  -moz-transform: rotate(194.4deg);
+  -ms-transform: rotate(194.4deg);
+  -o-transform: rotate(194.4deg);
+  transform: rotate(194.4deg);
+}
+.circularProgress.percent55 .bar {
+  -webkit-transform: rotate(198deg);
+  -moz-transform: rotate(198deg);
+  -ms-transform: rotate(198deg);
+  -o-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.circularProgress.percent56 .bar {
+  -webkit-transform: rotate(201.6deg);
+  -moz-transform: rotate(201.6deg);
+  -ms-transform: rotate(201.6deg);
+  -o-transform: rotate(201.6deg);
+  transform: rotate(201.6deg);
+}
+.circularProgress.percent57 .bar {
+  -webkit-transform: rotate(205.20000000000002deg);
+  -moz-transform: rotate(205.20000000000002deg);
+  -ms-transform: rotate(205.20000000000002deg);
+  -o-transform: rotate(205.20000000000002deg);
+  transform: rotate(205.20000000000002deg);
+}
+.circularProgress.percent58 .bar {
+  -webkit-transform: rotate(208.8deg);
+  -moz-transform: rotate(208.8deg);
+  -ms-transform: rotate(208.8deg);
+  -o-transform: rotate(208.8deg);
+  transform: rotate(208.8deg);
+}
+.circularProgress.percent59 .bar {
+  -webkit-transform: rotate(212.4deg);
+  -moz-transform: rotate(212.4deg);
+  -ms-transform: rotate(212.4deg);
+  -o-transform: rotate(212.4deg);
+  transform: rotate(212.4deg);
+}
+.circularProgress.percent60 .bar {
+  -webkit-transform: rotate(216deg);
+  -moz-transform: rotate(216deg);
+  -ms-transform: rotate(216deg);
+  -o-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.circularProgress.percent61 .bar {
+  -webkit-transform: rotate(219.6deg);
+  -moz-transform: rotate(219.6deg);
+  -ms-transform: rotate(219.6deg);
+  -o-transform: rotate(219.6deg);
+  transform: rotate(219.6deg);
+}
+.circularProgress.percent62 .bar {
+  -webkit-transform: rotate(223.20000000000002deg);
+  -moz-transform: rotate(223.20000000000002deg);
+  -ms-transform: rotate(223.20000000000002deg);
+  -o-transform: rotate(223.20000000000002deg);
+  transform: rotate(223.20000000000002deg);
+}
+.circularProgress.percent63 .bar {
+  -webkit-transform: rotate(226.8deg);
+  -moz-transform: rotate(226.8deg);
+  -ms-transform: rotate(226.8deg);
+  -o-transform: rotate(226.8deg);
+  transform: rotate(226.8deg);
+}
+.circularProgress.percent64 .bar {
+  -webkit-transform: rotate(230.4deg);
+  -moz-transform: rotate(230.4deg);
+  -ms-transform: rotate(230.4deg);
+  -o-transform: rotate(230.4deg);
+  transform: rotate(230.4deg);
+}
+.circularProgress.percent65 .bar {
+  -webkit-transform: rotate(234deg);
+  -moz-transform: rotate(234deg);
+  -ms-transform: rotate(234deg);
+  -o-transform: rotate(234deg);
+  transform: rotate(234deg);
+}
+.circularProgress.percent66 .bar {
+  -webkit-transform: rotate(237.6deg);
+  -moz-transform: rotate(237.6deg);
+  -ms-transform: rotate(237.6deg);
+  -o-transform: rotate(237.6deg);
+  transform: rotate(237.6deg);
+}
+.circularProgress.percent67 .bar {
+  -webkit-transform: rotate(241.20000000000002deg);
+  -moz-transform: rotate(241.20000000000002deg);
+  -ms-transform: rotate(241.20000000000002deg);
+  -o-transform: rotate(241.20000000000002deg);
+  transform: rotate(241.20000000000002deg);
+}
+.circularProgress.percent68 .bar {
+  -webkit-transform: rotate(244.8deg);
+  -moz-transform: rotate(244.8deg);
+  -ms-transform: rotate(244.8deg);
+  -o-transform: rotate(244.8deg);
+  transform: rotate(244.8deg);
+}
+.circularProgress.percent69 .bar {
+  -webkit-transform: rotate(248.4deg);
+  -moz-transform: rotate(248.4deg);
+  -ms-transform: rotate(248.4deg);
+  -o-transform: rotate(248.4deg);
+  transform: rotate(248.4deg);
+}
+.circularProgress.percent70 .bar {
+  -webkit-transform: rotate(252deg);
+  -moz-transform: rotate(252deg);
+  -ms-transform: rotate(252deg);
+  -o-transform: rotate(252deg);
+  transform: rotate(252deg);
+}
+.circularProgress.percent71 .bar {
+  -webkit-transform: rotate(255.6deg);
+  -moz-transform: rotate(255.6deg);
+  -ms-transform: rotate(255.6deg);
+  -o-transform: rotate(255.6deg);
+  transform: rotate(255.6deg);
+}
+.circularProgress.percent72 .bar {
+  -webkit-transform: rotate(259.2deg);
+  -moz-transform: rotate(259.2deg);
+  -ms-transform: rotate(259.2deg);
+  -o-transform: rotate(259.2deg);
+  transform: rotate(259.2deg);
+}
+.circularProgress.percent73 .bar {
+  -webkit-transform: rotate(262.8deg);
+  -moz-transform: rotate(262.8deg);
+  -ms-transform: rotate(262.8deg);
+  -o-transform: rotate(262.8deg);
+  transform: rotate(262.8deg);
+}
+.circularProgress.percent74 .bar {
+  -webkit-transform: rotate(266.40000000000003deg);
+  -moz-transform: rotate(266.40000000000003deg);
+  -ms-transform: rotate(266.40000000000003deg);
+  -o-transform: rotate(266.40000000000003deg);
+  transform: rotate(266.40000000000003deg);
+}
+.circularProgress.percent75 .bar {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.circularProgress.percent76 .bar {
+  -webkit-transform: rotate(273.6deg);
+  -moz-transform: rotate(273.6deg);
+  -ms-transform: rotate(273.6deg);
+  -o-transform: rotate(273.6deg);
+  transform: rotate(273.6deg);
+}
+.circularProgress.percent77 .bar {
+  -webkit-transform: rotate(277.2deg);
+  -moz-transform: rotate(277.2deg);
+  -ms-transform: rotate(277.2deg);
+  -o-transform: rotate(277.2deg);
+  transform: rotate(277.2deg);
+}
+.circularProgress.percent78 .bar {
+  -webkit-transform: rotate(280.8deg);
+  -moz-transform: rotate(280.8deg);
+  -ms-transform: rotate(280.8deg);
+  -o-transform: rotate(280.8deg);
+  transform: rotate(280.8deg);
+}
+.circularProgress.percent79 .bar {
+  -webkit-transform: rotate(284.40000000000003deg);
+  -moz-transform: rotate(284.40000000000003deg);
+  -ms-transform: rotate(284.40000000000003deg);
+  -o-transform: rotate(284.40000000000003deg);
+  transform: rotate(284.40000000000003deg);
+}
+.circularProgress.percent80 .bar {
+  -webkit-transform: rotate(288deg);
+  -moz-transform: rotate(288deg);
+  -ms-transform: rotate(288deg);
+  -o-transform: rotate(288deg);
+  transform: rotate(288deg);
+}
+.circularProgress.percent81 .bar {
+  -webkit-transform: rotate(291.6deg);
+  -moz-transform: rotate(291.6deg);
+  -ms-transform: rotate(291.6deg);
+  -o-transform: rotate(291.6deg);
+  transform: rotate(291.6deg);
+}
+.circularProgress.percent82 .bar {
+  -webkit-transform: rotate(295.2deg);
+  -moz-transform: rotate(295.2deg);
+  -ms-transform: rotate(295.2deg);
+  -o-transform: rotate(295.2deg);
+  transform: rotate(295.2deg);
+}
+.circularProgress.percent83 .bar {
+  -webkit-transform: rotate(298.8deg);
+  -moz-transform: rotate(298.8deg);
+  -ms-transform: rotate(298.8deg);
+  -o-transform: rotate(298.8deg);
+  transform: rotate(298.8deg);
+}
+.circularProgress.percent84 .bar {
+  -webkit-transform: rotate(302.40000000000003deg);
+  -moz-transform: rotate(302.40000000000003deg);
+  -ms-transform: rotate(302.40000000000003deg);
+  -o-transform: rotate(302.40000000000003deg);
+  transform: rotate(302.40000000000003deg);
+}
+.circularProgress.percent85 .bar {
+  -webkit-transform: rotate(306deg);
+  -moz-transform: rotate(306deg);
+  -ms-transform: rotate(306deg);
+  -o-transform: rotate(306deg);
+  transform: rotate(306deg);
+}
+.circularProgress.percent86 .bar {
+  -webkit-transform: rotate(309.6deg);
+  -moz-transform: rotate(309.6deg);
+  -ms-transform: rotate(309.6deg);
+  -o-transform: rotate(309.6deg);
+  transform: rotate(309.6deg);
+}
+.circularProgress.percent87 .bar {
+  -webkit-transform: rotate(313.2deg);
+  -moz-transform: rotate(313.2deg);
+  -ms-transform: rotate(313.2deg);
+  -o-transform: rotate(313.2deg);
+  transform: rotate(313.2deg);
+}
+.circularProgress.percent88 .bar {
+  -webkit-transform: rotate(316.8deg);
+  -moz-transform: rotate(316.8deg);
+  -ms-transform: rotate(316.8deg);
+  -o-transform: rotate(316.8deg);
+  transform: rotate(316.8deg);
+}
+.circularProgress.percent89 .bar {
+  -webkit-transform: rotate(320.40000000000003deg);
+  -moz-transform: rotate(320.40000000000003deg);
+  -ms-transform: rotate(320.40000000000003deg);
+  -o-transform: rotate(320.40000000000003deg);
+  transform: rotate(320.40000000000003deg);
+}
+.circularProgress.percent90 .bar {
+  -webkit-transform: rotate(324deg);
+  -moz-transform: rotate(324deg);
+  -ms-transform: rotate(324deg);
+  -o-transform: rotate(324deg);
+  transform: rotate(324deg);
+}
+.circularProgress.percent91 .bar {
+  -webkit-transform: rotate(327.6deg);
+  -moz-transform: rotate(327.6deg);
+  -ms-transform: rotate(327.6deg);
+  -o-transform: rotate(327.6deg);
+  transform: rotate(327.6deg);
+}
+.circularProgress.percent92 .bar {
+  -webkit-transform: rotate(331.2deg);
+  -moz-transform: rotate(331.2deg);
+  -ms-transform: rotate(331.2deg);
+  -o-transform: rotate(331.2deg);
+  transform: rotate(331.2deg);
+}
+.circularProgress.percent93 .bar {
+  -webkit-transform: rotate(334.8deg);
+  -moz-transform: rotate(334.8deg);
+  -ms-transform: rotate(334.8deg);
+  -o-transform: rotate(334.8deg);
+  transform: rotate(334.8deg);
+}
+.circularProgress.percent94 .bar {
+  -webkit-transform: rotate(338.40000000000003deg);
+  -moz-transform: rotate(338.40000000000003deg);
+  -ms-transform: rotate(338.40000000000003deg);
+  -o-transform: rotate(338.40000000000003deg);
+  transform: rotate(338.40000000000003deg);
+}
+.circularProgress.percent95 .bar {
+  -webkit-transform: rotate(342deg);
+  -moz-transform: rotate(342deg);
+  -ms-transform: rotate(342deg);
+  -o-transform: rotate(342deg);
+  transform: rotate(342deg);
+}
+.circularProgress.percent96 .bar {
+  -webkit-transform: rotate(345.6deg);
+  -moz-transform: rotate(345.6deg);
+  -ms-transform: rotate(345.6deg);
+  -o-transform: rotate(345.6deg);
+  transform: rotate(345.6deg);
+}
+.circularProgress.percent97 .bar {
+  -webkit-transform: rotate(349.2deg);
+  -moz-transform: rotate(349.2deg);
+  -ms-transform: rotate(349.2deg);
+  -o-transform: rotate(349.2deg);
+  transform: rotate(349.2deg);
+}
+.circularProgress.percent98 .bar {
+  -webkit-transform: rotate(352.8deg);
+  -moz-transform: rotate(352.8deg);
+  -ms-transform: rotate(352.8deg);
+  -o-transform: rotate(352.8deg);
+  transform: rotate(352.8deg);
+}
+.circularProgress.percent99 .bar {
+  -webkit-transform: rotate(356.40000000000003deg);
+  -moz-transform: rotate(356.40000000000003deg);
+  -ms-transform: rotate(356.40000000000003deg);
+  -o-transform: rotate(356.40000000000003deg);
+  transform: rotate(356.40000000000003deg);
+}
+.circularProgress.percent100 .bar {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.circularProgress:hover {
+  cursor: default;
+}
+
+.circularProgress:hover:after {
+  background-color: rgba(235, 235, 235, 1);
+}
+.circularProgress:hover > span {
+  font-weight: bolder;
+  color: rgb(136, 165, 175);
+}
+
+.circularProgress.dark {
+  background-color: #777777;
+}
+.circularProgress.dark .bar,
+.circularProgress.dark .fill {
+  border-color: #c6ff00 !important;
+}
+.circularProgress.dark > span {
+  color: #777777;
+}
+.circularProgress.dark:after {
+  background-color: #666666;
+}
+.circularProgress.dark:hover > span {
+  color: #c6ff00;
+}
+.circularProgress.green .bar,
+.circularProgress.green .fill {
+  border-color: #4db53c !important;
+}
+.circularProgress.green:hover > span {
+  color: #4db53c;
+}
+.circularProgress.green.dark .bar,
+.circularProgress.green.dark .fill {
+  border-color: #5fd400 !important;
+}
+.circularProgress.green.dark:hover > span {
+  color: #5fd400;
+}
+.circularProgress.orange .bar,
+.circularProgress.orange .fill {
+  border-color: #dd9d22 !important;
+}
+.circularProgress.orange:hover > span {
+  color: #dd9d22;
+}
+.circularProgress.orange.dark .bar,
+.circularProgress.orange.dark .fill {
+  border-color: #e08833 !important;
+}
+.circularProgress.orange.dark:hover > span {
+  color: #e08833;
 }
 
 /* DARK MODE CSS SECTION */
-.dark-mode, .dark-mode nav, .dark-mode .sidenav,
+.dark-mode,
+.dark-mode nav,
+.dark-mode .sidenav,
 .dark-mode .dropdown-content {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-.dark-mode nav, .dark-mode .search-results,
-.dark-mode .card-panel, .dark-mode .card, .dark-mode .toast, .dark-mode .btn, .dark-mode .btn-large, .dark-mode .btn-small, .dark-mode .btn-floating {
-    -webkit-box-shadow: 0 2px 2px 0 rgb(176 214 226 / 14%), 0 3px 1px -2px rgb(176 214 226 / 12%), 0 1px 5px 0 rgb(176 214 226 / 20%);
-    box-shadow: 0 2px 2px 0 rgb(176 214 226 / 14%), 0 3px 1px -2px rgb(176 214 226 / 12%), 0 1px 5px 0 rgb(176 214 226 / 20%);
+.dark-mode nav,
+.dark-mode .search-results,
+.dark-mode .card-panel,
+.dark-mode .card,
+.dark-mode .toast,
+.dark-mode .btn,
+.dark-mode .btn-large,
+.dark-mode .btn-small,
+.dark-mode .btn-floating {
+  -webkit-box-shadow: 0 2px 2px 0 rgb(176 214 226 / 14%),
+    0 3px 1px -2px rgb(176 214 226 / 12%), 0 1px 5px 0 rgb(176 214 226 / 20%);
+  box-shadow: 0 2px 2px 0 rgb(176 214 226 / 14%),
+    0 3px 1px -2px rgb(176 214 226 / 12%), 0 1px 5px 0 rgb(176 214 226 / 20%);
 }
 
 .dark-mode .search-results {
-    background-color: black;
+  background-color: black;
 }
 
-.dark-mode .waves-effect .waves-ripple, .dark-mode .sidenav-overlay,
-.dark-mode .search-results a:hover, .dark-mode .search-results a:focus,
-.dark-mode .dropdown-content *:hover, .dark-mode .dropdown-content *:focus,
-.dark-mode header ul li a:hover, .dark-mode header ul li a:focus,
-.dark-mode main ul li a:hover, .dark-mode main ul li a:focus {
-    background-color: rgba(255, 255, 255, 0.45);
+.dark-mode .waves-effect .waves-ripple,
+.dark-mode .sidenav-overlay,
+.dark-mode .search-results a:hover,
+.dark-mode .search-results a:focus,
+.dark-mode .dropdown-content *:hover,
+.dark-mode .dropdown-content *:focus,
+.dark-mode header ul li a:hover,
+.dark-mode header ul li a:focus,
+.dark-mode main ul li a:hover,
+.dark-mode main ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
-.dark-mode .sidenav .material-icons, .dark-mode nav a:not([class*="btn"]) {
-    color: white !important;
+.dark-mode .sidenav .material-icons,
+.dark-mode nav a:not([class*="btn"]) {
+  color: white !important;
+}
+
+.dark-mode .breadcrumb-container :not(a:first-child)::before {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode .breadcrumb-container a:last-child {
+  color: white;
 }

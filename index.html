@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
     <title>AVA Micro-learning</title>
     <link type="text/css" rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="./resources/css/fonts.css"/>
     <link type="text/css" rel="stylesheet" href="./resources/css/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <base href="/">
 </head>
-<body>
+<body ng-app="microLearningApp">
     <header>
         <nav>
             <div class="nav-wrapper container">
-                <a data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <a href="#" class="brand-logo"><img src="./resources/images/AVA_ICON-TransparentBG.png"></a>
-                
+                <a data-target="slide-out" class="sidenav-trigger" style="cursor: pointer;"><i class="material-icons">menu</i></a>
+                <a href="/" class="brand-logo"><img src="./resources/images/AVA_ICON-TransparentBG.png"></a>
                 <ul class="right hide-on-med-and-down">
                     <li class="search-nav-wrapper">
                         <div id="search-nav">
@@ -32,8 +35,8 @@
                         </div> -->
                     </li>
                     <li><a class="dropdown-trigger" data-target="notifications-dropdown">Thông Báo<span class="new badge">4</span></a></li>
-                    <li><a class="waves-effect waves-light btn-small" onclick="switchDarkLight();" id="toggle-dark-light"></a></li>
                 </ul>
+                
             </div>
             <ul id="slide-out" class="sidenav">
                 <li>
@@ -47,61 +50,19 @@
                     </div>
                 </li>
                 
-                <li><a class="waves-effect waves-ripple" href="#/courses">Khóa Học<i class="material-icons">class</i></a></li>
-                <li><a class="waves-effect waves-ripple" href="#/media">Tài Nguyên<i class="material-icons">play_circle_outline</i></a></li>
-                <li><a class="waves-effect waves-ripple" href="#/timetable">Thời Khóa Biểu<i class="material-icons">date_range</i></a></li>
-                <li><a class="waves-effect waves-ripple" href="#/revision">Ôn Tập<i class="material-icons">import_contacts</i></a></li>
-                <li><a class="waves-effect waves-ripple" href="#/assessment">Thành Tích Học Tập<i class="material-icons">assessment</i></a></li>
+                <li><a class="waves-effect waves-ripple sidenav-close" href="#!courses">Khóa Học<i class="material-icons">class</i></a></li>
+                <li><a class="waves-effect waves-ripple sidenav-close" href="#!media">Tài Nguyên<i class="material-icons">play_circle_outline</i></a></li>
+                <li><a class="waves-effect waves-ripple sidenav-close" href="#!timetable">Thời Khóa Biểu<i class="material-icons">date_range</i></a></li>
+                <li><a class="waves-effect waves-ripple sidenav-close" href="#!revision">Ôn Tập<i class="material-icons">import_contacts</i></a></li>
+                <li><a class="waves-effect waves-ripple sidenav-close" href="#!assessment">Thành Tích Học Tập<i class="material-icons">assessment</i></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="row">
-                <h4>Khóa Học</h4>
-                <div class="divider"></div>
-                <div class="row">
-                    <h5>Môn Học</h5>
-                </div>
-                <div class="row">
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./resources/images/math.jfif">
-                                <span class="card-title">Toán</span>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">Xem Cụ Thể</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card">
-                            <div class="card-image">
-                
-                                <img src="./resources/images/english.jpg">
-                                <span class="card-title">Tiếng Anh</span>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">Xem Cụ Thể</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <a class="right" href="#">Xem tất cả</a>
-                </div>
-            </div>
-            <div class="row">
-                <h4>Quá Trình Học</h4>
-                <div class="divider"></div>
-                <div class="row card-panel">
-                    <h5 class="black-text">Toán</h5>
-                    <div class="progress study-progress">
-                        <div class="determinate" style="width: 70%"><span>70%</span></div>
-                    </div>
-                </div>
+    <main ng-view>
+        <div class="container" id="loadingDiv">
+            <div class="progress">
+                <div class="indeterminate"></div>
             </div>
         </div>
     </main>
@@ -118,6 +79,7 @@
                     <ul>
                         <li><a href="#!">Về Chúng Tôi</a></li>
                         <li><a href="#!">Liên Hệ</a></li>
+                        <li><a class="waves-effect waves-light btn-small" onclick="switchDarkLight();" id="toggle-dark-light"></a></li>
                     </ul>
                 </div>
             </div>
@@ -138,8 +100,10 @@
         <li><a href="#!">Xóa Hết</a></li>
     </ul>
 
-    <script src="./node_modules/angular/angular.min.js" type="text/javascript"></script>
+    <script src="./node_modules/angular/angular.js" type="text/javascript"></script>
+    <script src="./node_modules/angular-route/angular-route.js" type="text/javascript"></script>
     <script src="./node_modules/materialize-css/dist/js/materialize.min.js" type="text/javascript"></script>
     <script src="./resources/js/index.js" type="text/javascript"></script>
+    <script src="./resources/js/appRouter.js" type="text/javascript"></script>
 </body>
 </html>

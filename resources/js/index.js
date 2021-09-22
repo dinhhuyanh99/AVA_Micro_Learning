@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var sidenavsInstances = M.Sidenav.init(sidenavs, {});
     var dropdowns = document.querySelectorAll('.dropdown-trigger');
     var dropdownsInstances = M.Dropdown.init(dropdowns, {coverTrigger: false});
+    var collapsibles = document.querySelectorAll('.collapsible');
+    var collapsibleInstances = M.Collapsible.init(collapsibles, {});
 
     // Get saved value to see if dark mode is previously enabled.
     if(isDarkModeEnabled == null || isDarkModeEnabled == undefined) {
